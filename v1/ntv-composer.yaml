@@ -1,11 +1,8 @@
-description: A Docker environment with Portainer and related tools
-version: 0.4
+description: Debian 12 Bullseye
+version: latest
 
 runs-on:
-- arm
 - arm64
-- power64
-- s390x
 - x86_64
 
 aliases:
@@ -13,16 +10,22 @@ aliases:
   docker-compose: docker:docker-compose
 
 instances:
-  ntv-composer:
-    image: 22.04
-    workspace: true
+  debian:
+    images:
+      x86_64:
+        url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2
+
+      arm64:
+        url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-arm64.qcow2
+
     limits:
-      min-cpu: 2
+      min-cpu: 1
       min-mem: 4G
       min-disk: 40G
+
     cloud-init:
       vendor-data: |
-        apt:
+       apt:
           sources:
             docker:
               source: |
@@ -92,6 +95,7 @@ instances:
                 -----END PGP PUBLIC KEY BLOCK-----
 
         packages:
+        - snapd
         - binfmt-support
         - docker-ce
         - docker-ce-cli
@@ -103,7 +107,11 @@ instances:
         - git
         - mariadb-common
         - php-common
+        - php-curl
+        - php-mysql
+        - php-zip
         - nodejs
+        - npm
         - composer
 
         snap:
@@ -149,4 +157,4 @@ instances:
         final_message: "The system is finally up, after $UPTIME seconds"
 
 health-check: |
-  docker run hello-world
+  cat /etc/issue.net
