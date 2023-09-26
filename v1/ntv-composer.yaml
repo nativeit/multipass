@@ -6,8 +6,8 @@ runs-on:
 - x86_64
 
 aliases:
-  docker: docker:docker
-  docker-compose: docker:docker-compose
+  docker: ntv-composer:docker
+  docker-compose: ntv-composer:docker-compose
 
 instances:
   ntv-composer:
@@ -19,7 +19,7 @@ instances:
         url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-arm64.qcow2
 
     limits:
-      min-cpu: 1
+      min-cpu: 2
       min-mem: 4G
       min-disk: 40G
 
@@ -121,8 +121,8 @@ instances:
 
         runcmd:
         - |
-          # add `ubuntu` to the `docker` group
-          adduser ubuntu docker
+          # add `debian` to the `docker` group
+          adduser debian docker
 
         - |
           # disable swap
