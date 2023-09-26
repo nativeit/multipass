@@ -10,7 +10,7 @@ aliases:
   docker-compose: docker:docker-compose
 
 instances:
-  debian:
+  ntv-composer:
     images:
       x86_64:
         url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2
@@ -112,6 +112,7 @@ instances:
         - php-zip
         - nodejs
         - npm
+        - nodeenv
         - composer
 
         snap:
