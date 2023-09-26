@@ -1,9 +1,9 @@
-description: Debian 12 Bullseye
-version: latest
+description: PHP Composer & Docker environment with Portainer on Debian 12
+version: 0.1
 
 runs-on:
 - arm64
-- x86_64
+- amd64
 
 aliases:
   docker: ntv-composer:docker
@@ -14,15 +14,13 @@ instances:
     images:
       x86_64:
         url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2
-
       arm64:
         url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-arm64.qcow2
-
+    workspace: true
     limits:
       min-cpu: 2
       min-mem: 4G
       min-disk: 40G
-
     cloud-init:
       vendor-data: |
        apt:
