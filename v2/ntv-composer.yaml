@@ -107,6 +107,7 @@ instances:
 
         snap:
           commands:
+          - snap install core
           - snap install yq
 
         runcmd:
