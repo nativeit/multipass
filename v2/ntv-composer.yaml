@@ -2,12 +2,8 @@ description: PHP Composer on Debian 12
 version: latest
 
 instances:
-  ntv-composer:
-    images:
-      x86_64:
-        url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2
-      arm64:
-        url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-arm64.qcow2
+  docker:
+    image: 24.04
     workspace: true
     limits:
       min-cpu: 2
