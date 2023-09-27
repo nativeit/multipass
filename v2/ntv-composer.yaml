@@ -1,13 +1,5 @@
-description: PHP Composer & Docker environment with Portainer on Debian 12
+description: PHP Composer on Debian 12
 version: latest
-
-runs-on:
-- arm64
-- x86_64
-
-aliases:
-  docker: ntv-composer:docker
-  docker-compose: ntv-composer:docker-compose
 
 instances:
   ntv-composer:
