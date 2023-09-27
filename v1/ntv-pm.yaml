@@ -85,7 +85,6 @@ instances:
                 -----END PGP PUBLIC KEY BLOCK-----
 
         packages:
-        - aptitude
         - binfmt-support
         - docker-ce
         - docker-ce-cli
