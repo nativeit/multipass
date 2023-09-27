@@ -96,6 +96,7 @@ instances:
         - skopeo
         - git
         - mariadb-common
+        - mariadb-server
         - php-common
         - php-bz2
         - php-curl
@@ -104,6 +105,8 @@ instances:
         - php-json
         - php-mysql
         - php-raphf
+        - php-xml
+        - php-xmlrpc
         - php-zip
         - nodejs
         - npm
@@ -123,6 +126,7 @@ instances:
         - |
           # add `ubuntu` to the `docker` group
           adduser ubuntu docker
+          usermod -a --shell /usr/bin/zsh ubuntu
 
         - |
           # disable swap
