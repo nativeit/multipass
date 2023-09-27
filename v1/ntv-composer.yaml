@@ -7,7 +7,7 @@ runs-on:
 
 instances:
   ntv-composer:
-    image: 24.04
+    image: 22.04
     workspace: true
     limits:
       min-cpu: 2
