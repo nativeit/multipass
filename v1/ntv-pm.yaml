@@ -6,7 +6,7 @@ runs-on:
 - x86_64
 
 instances:
-  ntv-composer:
+  ntv-pm:
     image: 23.04
     workspace: true
     limits:
