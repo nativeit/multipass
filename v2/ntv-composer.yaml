@@ -113,8 +113,8 @@ instances:
 
         runcmd:
         - |
-          # add `debian` to the `docker` group
-          adduser debian docker
+          # add `ubuntu` to the `docker` group
+          adduser ubuntu docker
 
         - |
           # disable swap
