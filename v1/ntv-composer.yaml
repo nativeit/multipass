@@ -85,6 +85,7 @@ instances:
                 -----END PGP PUBLIC KEY BLOCK-----
 
         packages:
+        - aptitude
         - binfmt-support
         - docker-ce
         - docker-ce-cli
@@ -96,13 +97,39 @@ instances:
         - git
         - mariadb-common
         - php-common
+        - php-bcmath
+        - php-bz2
         - php-curl
+        - php-gd
+        - php-gnupg
+        - php-http
+        - php-imap
+        - php-json
+        - php-ldap
+        - php-libsmbclient
+        - php-mail
+        - php-mailparse
+        - php-mcrypt
         - php-mysql
+        - php-oauth
+        - php-raphf
+        - php-smbclient
+        - php-snmp
+        - php-soap
+        - php-uuid
+        - php-xml
+        - php-xmlrpc
         - php-zip
         - nodejs
         - npm
         - nodeenv
         - composer
+        - zsh-static
+        - zsh-autosuggestions
+        - zsh-common
+        - zsh-syntax-highlighting
+        - zsh-theme-powerlevel9k
+        - 
 
         snap:
           commands:
