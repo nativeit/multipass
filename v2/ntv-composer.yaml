@@ -3,7 +3,7 @@ version: latest
 
 runs-on:
 - arm64
-- amd64
+- x86_64
 
 aliases:
   docker: ntv-composer:docker
@@ -12,7 +12,7 @@ aliases:
 instances:
   ntv-composer:
     images:
-      amd64:
+      x86_64:
         url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2
       arm64:
         url: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-arm64.qcow2
@@ -154,6 +154,6 @@ instances:
           apt-get autoremove -y
 
         final_message: "The system is finally up, after $UPTIME seconds"
-        
+
 health-check: |
   cat /etc/issue.net
