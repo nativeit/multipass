@@ -1,5 +1,5 @@
 description: PHP Composer & Docker environment with Portainer on Debian 12
-version: 0.1
+version: latest
 
 runs-on:
 - arm64
@@ -154,5 +154,6 @@ instances:
           apt-get autoremove -y
 
         final_message: "The system is finally up, after $UPTIME seconds"
+        
 health-check: |
   cat /etc/issue.net
