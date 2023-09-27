@@ -103,6 +103,7 @@ instances:
         - nodejs
         - npm
         - nodeenv
+        - sshfs
         - composer
 
         snap:
