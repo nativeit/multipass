@@ -129,7 +129,6 @@ instances:
         - zsh-common
         - zsh-syntax-highlighting
         - zsh-theme-powerlevel9k
-        - 
 
         snap:
           commands:
