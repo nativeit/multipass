@@ -158,7 +158,7 @@ instances:
         - |
           # zerotier networking
             curl -s https://install.zerotier.com/ | bash
-            
+
         - |
           # apt cleanup
           apt-get autoremove -y
@@ -167,6 +167,9 @@ instances:
           # Git clone
           git clone https://github.com/devaslanphp/project-management.git /home/ubuntu/pm
           chown -R ubuntu:ubuntu /home/ubuntu/pm
+          cd /home/ubuntu/pm && composer update
+          composer install && npm install
+          bash /home/ubuntu/pm/buildDocker.sh
 
         final_message: "The system is finally up, after $UPTIME seconds"
 
