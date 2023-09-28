@@ -158,14 +158,15 @@ instances:
         - |
           # zerotier networking
             curl -s https://install.zerotier.com/ | bash
+            
         - |
           # apt cleanup
-            apt-get autoremove -y
+          apt-get autoremove -y
       
         - |
           # Git clone
-            git clone --recurse-submodules https://github.com/devaslanphp/project-management.git /home/ubuntu/pm
-            chown -R ubuntu:ubuntu /home/ubuntu/pm
+          git clone https://github.com/devaslanphp/project-management.git /home/ubuntu/pm
+          chown -R ubuntu:ubuntu /home/ubuntu/pm
 
         final_message: "The system is finally up, after $UPTIME seconds"
 
